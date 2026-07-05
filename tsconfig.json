@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-
     "target": "ES2022",
 
     "lib": [
@@ -40,11 +39,8 @@
     ],
 
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
-
   },
 
   "include": [
@@ -52,7 +48,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "next.config.js"  ],
 
   "exclude": [
     "node_modules"

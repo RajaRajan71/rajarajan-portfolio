@@ -1,17 +1,12 @@
-import { Geist } from "next/font/google";
-
-const geist = Geist({
-subsets:["latin"]
-});
-
-<body className={geist.className}></body>
-
-
-
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
-export const metadata = {
+const geist = Geist({
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
   title: "Rajarajan M | Applied AI Engineer",
 
   description:
@@ -26,25 +21,39 @@ export const metadata = {
     "Python",
     "FastAPI",
     "Docker",
-    "Portfolio"
+    "Portfolio",
   ],
 
   authors: [
     {
-      name: "Rajarajan M"
-    }
+      name: "Rajarajan M",
+    },
   ],
 
   creator: "Rajarajan M",
 
   openGraph: {
-    title: "Rajarajan M | AI Engineer",
+    title: "Rajarajan M | Applied AI Engineer",
 
     description:
       "Applied AI Engineer building Production-ready LLM Applications.",
 
     type: "website",
 
-    locale: "en_US"
-  }
+    locale: "en_US",
+  },
 };
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={geist.className}>
+        {children}
+      </body>
+    </html>
+  );
+}

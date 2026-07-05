@@ -4,7 +4,7 @@ const projects = [
   {
     title: "⚖️ Legal Multi-Agent RAG",
 
-    image: "/project-images/legal-ai-home.png",
+    image: "/project-images/legal_ai_home.png",
 
     description:
       "Production-ready Legal AI powered by Llama-3, LangChain, FAISS and ChromaDB with citation-aware Retrieval-Augmented Generation.",
@@ -19,7 +19,7 @@ const projects = [
   {
     title: "🖼️ Palludagam Multimodal AI",
 
-    image: "/project-images/multimodal-home.png",
+    image: "/project-images/multimodal_home.png",
 
     description:
       "Processes Images, PDFs and Audio using Gemini 2.5 Flash with Docker deployment and multimodal workflows.",
@@ -34,7 +34,7 @@ const projects = [
   {
     title: "🤖 GPT-2 Fine-Tuning",
 
-    image: "/project-images/gpt2-home.png",
+    image: "/project-images/gpt2_home.png",
 
     description:
       "Fine-tuned GPT-2 using Hugging Face Transformers for domain-specific text generation.",
@@ -50,7 +50,7 @@ const projects = [
   {
     title: "📰 AI News Brief Generator",
 
-    image: "/project-images/ai-news-home.png",
+    image: "/project-images/ai_news_home.png",
 
     description:
       "Summarizes 50+ news articles daily using Transformer-based NLP pipelines.",
@@ -66,7 +66,7 @@ const projects = [
   {
     title: "🎯 Ad-to-LP Personalizer",
 
-    image: "/project-images/ad-to-lp-home.png",
+    image: "/project-images/ad_to_lp_home.png",
 
     description:
       "Generative AI system that creates personalized landing pages based on advertisement content.",
@@ -83,22 +83,27 @@ const projects = [
 export default function FeaturedProjects() {
   return (
     <section id="projects">
+
       <h2 className="title gradient text-center">
         Featured AI Projects
       </h2>
 
       <p className="subtitle text-center max-w-3xl mx-auto">
-                    A collection of production-ready AI applications built using
-                    Generative AI, Large Language Models, Retrieval-Augmented
-                    Generation (RAG), Agentic AI, FastAPI, Docker, and modern AI
-                    deployment workflows.
-                    </p>
+        A collection of production-ready AI applications built using
+        Generative AI, Large Language Models, Retrieval-Augmented
+        Generation (RAG), Agentic AI, FastAPI, Docker and modern AI
+        deployment workflows.
+      </p>
 
       <div className="cards mt-12">
         {projects.map((project) => (
-          <ProjectCard key={project.title} {...project} />
+          <ProjectCard
+            key={project.title}
+            {...project}
+          />
         ))}
       </div>
+
     </section>
   );
 }

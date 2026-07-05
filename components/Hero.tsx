@@ -115,16 +115,7 @@ export default function Hero() {
         {/* RIGHT */}
 
         <div className="hero-image">
-
-          <Image
-            src="/profile.jpg"
-            alt="Rajarajan"
-            width={380}
-            height={380}
-            priority
-            className="profile-image"
-          />
-
+          
         </div>
 
       </div>
